@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: wil-app
+  namespace: dev
+spec:
+  selector:
+    app: wil-app
+  ports:
+    - port: 80
+      targetPort: 8888
+  type: ClusterIP
